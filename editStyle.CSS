@@ -1,0 +1,216 @@
+* {box-sizing:border-box} /*don't change the box size when adding a padding or margin*/
+body{
+  font-family:Verdana;
+  font-size: 1.5vw;
+  color: #001D3D   ;
+}
+header { /* the style of the header as a whole entety*/
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  line-height: 50px;
+  background-color: #000814;
+
+  animation: 1s ease-out 0s 1 slideInFromLeft; /*adding slide in from left animation*/
+}
+header * { /* the style of the header's stuff*/
+  display: inline;
+  height: 50px;
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+header li {
+  margin-left: 20px;
+}
+#profileImg {border: 1px solid #ddd;
+  border-radius: 50%;
+  padding: 5px;
+  width: 30%;
+}
+section {
+  height: 100vh;
+  border: 2px dotted #FFD60A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+header a {
+  text-decoration: none;
+  color: #FFD60A;
+  font-size: 1em;
+}
+h1{
+    width: fit-content;
+    height: fit-content;
+    transition: width 0.25s, height 0.25s, transform 0.25s;
+}
+h1:hover{ /*adding animation using  transition & transform to the header 1*/
+    width: 200%;
+    height: 125%;
+    transform: rotate(360deg);
+}
+.slidesContainer { /* Slideshow container */
+  max-width: 1000px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.slideImg{
+  width: 100%;
+  max-height: 400px;
+  top: 50%;
+  left: 50%;
+  padding: auto;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.slideMiddle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.slides:hover .slideImg {
+  opacity: 0.3;
+}
+.slides:hover .slideMiddle {
+  opacity: 1;
+}
+.middleText {
+  background-color: #003566;
+  color: #FFC300;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.slides { /* Hide the images by default */
+  display: none;
+  position: relative;
+  animation-name: fadeingEffect;
+  animation-duration: 1.5s;
+}
+@keyframes fadeingEffect {
+  0% {opacity : .4}
+  100% {opacity : 1}
+}
+.prev, .next { /* Next & previous buttons */
+  cursor: pointer;
+  width: auto;
+  padding: 6px;
+  color: #003566;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  padding: 15% 10px; /*for vertical align*/
+  position: absolute;
+  top:0;
+  bottom: 0;
+}
+.prev{
+  left:0;
+}
+.next { /* Position the "next button" to the right */
+  right:0;
+}
+.prev:hover, .next:hover, .text:hover { /* On hover, add a black background color with alpha */
+  animation-name: colorToYellow;
+  animation-duration: 1s;
+}
+@keyframes colorToYellow{
+  0% {
+    color: #003566;}
+  100% {
+  background-color: #001D3D;
+  color: #FFC300;}
+}
+.text { /* Caption text */
+  text-align: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.6s ease;
+}
+.dot {
+  cursor: cell;
+  height: 25px;
+  width: 25px;
+  margin: 0 2px;
+  background-color: #FFC300;
+  display: inline-block;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+.dot:hover {
+  animation-name: colorToBlue;
+  animation-duration: 1s;
+}
+@keyframes colorToBlue{
+  0% {
+    background-color: #FFC300;}
+  100% {
+    background-color: #001D3D;}
+}
+footer {
+  text-align: center;
+  padding: 50px;
+  color:#000814;
+}
+.wavy{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  font-size: 80px;
+  overflow: hidden;
+  z-index: -1;
+}
+.wavy::before{
+  content: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+  position: absolute;
+  color: transparent;
+  top: -75px;
+  left: 0;
+  text-decoration: underline wavy #FFC300;
+  animation: wavyLine 4s alternate-reverse infinite ease-out;
+}
+@keyframes wavyLine {
+  0%{
+    left: -1px;
+  }
+  100%{
+    left: -200px;
+  }
+}
+
+#intro {
+  background: linear-gradient(rgba(230, 36, 36, 0.75),rgba(255,255,255,0.25)), url(intro.jpg);
+}
+#about {
+  background: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url(about.jpg);
+}
+#activity {
+  background: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)), url(activity.jpg);
+}
+#contact {
+  background: linear-gradient(rgba(255,255,255,0.25),rgba(255,255,255,0.75)), url(contact.jpg);
+}
