@@ -34,7 +34,7 @@ header * { /* the style of the header's stuff*/
 header li {
   margin-left: 20px;
 }
-#profileImg {border: 1px solid #ddd;
+#profImg {border: 1px solid #ddd; /*was prfileImg*/
   border-radius: 50%;
   padding: 5px;
   width: 30%;
