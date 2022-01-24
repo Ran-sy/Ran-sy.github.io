@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ranim's Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="styleSheet" href="./Style.CSS">
+    </head>
+    <body>
+        <header> <!--navigation bar-->
+            <img src = "./profile.jpg">
+            <nav>
+                <li><a href = "#introduction">Home</a></li>
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#activity">Activity</a></li>
+                <li><a href = "#contact">Contact</a></li>
+                <li><a target="_Blank" id="editPage" onclick = "userCheck()">Edit</a></li>
+            </nav>
+        </header>
 
+        <main> <!--main sections-->
+            <section id = "introduction"> 
+                <div class = "sectionInner">
+                    <img src = "./profile.jpg" id = "profileImg">
+                    <h1>Welcome to Ranim's</h1>
+                    <h1>official page</h1>
+                </div>
+            </section>
+            <section id = "about">
+                <div class = "sectionInner">
+                    <h2>About Me</h2>
+                    <p>My name is Ranim, and i'm an aspirant programmer and app developer, i got the bachelor's degree of physics & computer "science faculty" from ASU in Egypt</p>
+                    <p>I really like learning new skills, languages and i'm native Arabic speaker, fluent in English and good in Turkish language, and currently learning Japanease language</p>
+                </div>
+                <div>
+
+                </br>
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>Bachelor of science (physics & computer)</li>
+                        <li>Digital Marketing Course</li>
+                        <li>Website developer</li>
+                        <li>Graphic Designer</li>
+                    </ul>
+                </div>
+                <div class = "wavy"></div>
+            </section>
+            <section id = "activity">
+                <h2>Activity</h2>
+
+                <div class = "slidesContainer" style="display: flex;"> <!--Create Slideshow-->
+                    <!-- Next and previous buttons -->
+
+                    <div class = "slides">
+                        <img src="linear discriminant analysis.jpg" alt="linear discriminant analysis" class="slideImg" style="width:100%">
+                        <div class="slideMiddle">
+                            <a href = "https://k3wg6qtwdteffhzkvyugza-on.drv.tw/RaneemLDA.com/" target="_blank">
+                                <div class="middleText">press me</div></a>
+                        </div>
+                            <div class="text">Linear discriminant analysis problem solove, graphed & uploaded</div>
+                    </div>
+                    <div class = "slides">
+                        <img src="sudoku solver.jpg" alt="sudoku solver" class="slideImg" style="width:100%">
+                        <div class="slideMiddle">
+                            <a href = "https://drive.google.com/file/d/1cAzqjPO-ZzixiLCGqCbcQIDJtJ8EswTU/view?usp=sharing" target="_blank">
+                                <div class="middleText">have a look</div></a>
+                        </div>
+                       <div class = "text">MATLAB sudoku solver</div>
+                    </div>
+                    <div class = "slides">
+                        <img src="comming soon.jpg" alt="comming soon" class="slideImg" style="width:100%">
+                        <div class="slideMiddle">
+                            <a href = "https://drive.google.com/file/d/1V5DBqiIORydLtOqDIBjkZZIiUwNJArxT/view?usp=drivesdk" target="_blank">
+                                <div class="middleText">DO NOT OPEN</div></a>
+                        </div>
+                       <div class = "text">SST Excel operation</div>
+                    </div>
+                    <div class = "slides">
+                        <img src="comming soon.jpg" alt="comming soon" class="slideImg" style="width:100%">
+                        <div class="slideMiddle">
+                            <a href = "https://drive.google.com/file/d/1V5DBqiIORydLtOqDIBjkZZIiUwNJArxT/view?usp=drivesdk" target="_blank">
+                                <div class="middleText">DO NOT OPEN</div></a>
+                        </div>
+                        <div class = "text">Simple app with test & result</div>
+                    </div>
+                    <a class = "prev" onclick = "plusSlides(-1)"><</a>
+                    <a class = "next" onclick = "plusSlides(1)">></a>
+                    
+                </div>
+                
+                <!-- The dots/circles -->
+                <div style="text-align: center;"> <!--if you added an achievement add a dot here with i++ for the slide number-->
+                    <span class = "dot" onclick = "currentSlide(1)"></span>
+                    <span class = "dot" onclick = "currentSlide(2)"></span>
+                    <span class = "dot" onclick = "currentSlide(3)"></span>
+                    <span class = "dot" onclick = "currentSlide(4)"></span>
+                </div>
+            </section>
+            <section id = "contact" >
+                <div class = "sectionInner">
+                    <h2>Contact Me</h2>
+                    <p>You can contact me on</p>
+                    <ul style = "font-weight: bold;">
+                        <li><a href = "https://www.facebook.com/profile.php?id=100009789816277" target="_Blank">Facebook</a></li>
+                        <li><a href = "https://www.linkedin.com/in/ranim-t-a36483182" target="_Blank">LinkedIn</a></li>
+                        <li><a href = "https://wa.me/201158687721" target="_Blank">Whatsapp</a></li>
+                    </ul>
+                    <p>Or you can <a href = "mailto: Raneem.1999.ta@gmail.com" target="_Blank">send me an email</a></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            @COPYRIGHT Ranim 2022
+        </footer>
+        
+        <script src = "./JavaScript.js"></script>
+        <script src = "./editJavaScript.js"></script>
+    </body>
+</html>
