@@ -8,7 +8,7 @@ function userCheck() {
   }
 }
 //import values from storage
-document.getElementById("profileImg").src = localStorage.getItem("profileImg");
+//document.getElementById("profileImg").src = localStorage.getItem("profileImg");
 //the slide show 
 var slideIndex = 1;
 showSlides(slideIndex);
