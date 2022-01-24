@@ -1,5 +1,5 @@
 //import values from storage
-document.getElementById("profileImg").src = localStorage.getItem("profileImg");
+//document.getElementById("profileImg").src = localStorage.getItem("profileImg");
 //leaveCheck
 function leaveCheck(){
     alert('you are leaveing\n BYE');
